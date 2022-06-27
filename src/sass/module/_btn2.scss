@@ -1,0 +1,51 @@
+@use "global" as *;
+.btn2 {
+  display: inline-block;
+  width: rem(300);
+  max-width: 100%;
+  padding: rem(20) rem(10);
+  background-color: rgba(51, 51, 51, 1);
+  border: 2px solid transparent;
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+  transition: 0.75s;
+  // 下の隙間消し
+  vertical-align: top;
+  @include mq(md) {
+  }
+  @include mq(xl) {
+  }
+}
+
+.btn2::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: -100%;
+  transition: 0.75s;
+  background-color: rgba(255, 0, 0, 1);
+  @include mq(md) {
+  }
+  @include mq(xl) {
+  }
+}
+
+.btn2:focus::after,
+.btn2:hover::after {
+  left: 0%;
+  @include mq(md) {
+  }
+  @include mq(xl) {
+  }
+}
+
+// hover時の文字表示
+.btn2 span {
+  position: relative;
+  z-index: 10;
+  transition: 0.75s;
+}

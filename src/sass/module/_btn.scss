@@ -1,0 +1,31 @@
+@use "global" as *;
+.btn {
+  display: inline-block;
+  width: rem(300);
+  max-width: 100%;
+  padding: rem(20) rem(10);
+  background-color: #e25c00;
+  border: 2px solid transparent;
+  box-shadow: rem(0) rem(3) rem(6) rgba(0, 0, 0, 0.16);
+  color: #fff;
+  font-size: rem(18);
+  text-align: center;
+  text-decoration: none;
+  transition: 0.25s;
+  @include mq(md) {
+  }
+  @include mq(xl) {
+  }
+}
+
+.btn:focus,
+.btn:hover {
+  //   background-color: #fff;
+  background-color: rgba(255, 255, 255, 1);
+  border-color: currentColor;
+  color: #e25c00;
+  @include mq(md) {
+  }
+  @include mq(xl) {
+  }
+}

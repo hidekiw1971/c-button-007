@@ -1,0 +1,24 @@
+@use "global" as *;
+.btn__arrow--right {
+  position: relative;
+  padding-right: rem(32);
+  padding-left: rem(22.08);
+  @include mq(md) {
+  }
+  @include mq(xl) {
+  }
+}
+
+.btn__arrow--right::after {
+  content: "\f061";
+  position: absolute;
+  top: 50%;
+  right: rem(13.28);
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  transform: translateY(-50%);
+  @include mq(md) {
+  }
+  @include mq(xl) {
+  }
+}
